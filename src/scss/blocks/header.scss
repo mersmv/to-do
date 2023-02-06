@@ -1,0 +1,26 @@
+.header{
+    width: 100%;
+    height: 350px;
+    background-image: url('../assets/images/bg-desktop-light.jpg');
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.header-dark{
+    background-image: url('../assets/images/bg-desktop-dark.jpg');
+}
+
+.header__title{
+    font-size: 3rem;
+    color: white;
+}
+.dark-light-mode{
+    width: 30px;
+    height: 30px;
+    background-image: url('../assets/images/icon-moon.svg');
+    background-size: cover;
+}
