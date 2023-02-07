@@ -5,6 +5,12 @@
     <!-- PON UN FAVICON!!! -->
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,600&display=swap"
+      rel="stylesheet"
+    />
     <!-- CAMBIA EL TITLE!!! -->
     <title>To do list</title>
   </head>
@@ -19,9 +25,14 @@
       </div>
     </form>
     <div class="tasks-container" id="taskscontainer"></div>
-    <div>
-      <p>0 item left</p>
-      <div></div>
+    <div class="tasks-container tasks task-filter">
+      <p class="tasks__left">0 items left</p>
+      <div class="container-filter" id="filter__container">
+        <p class="filter__select">All</p>
+        <p class="filter__select">Active</p>
+        <p class="filter__select">Completed</p>
+      </div>
+      <p class="filter__clear">Clear Completed</p>
     </div>
     <script type="module" src="./js/index.js"></script>
   </body>

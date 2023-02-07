@@ -1,18 +1,31 @@
 // El styles lo importamos aquí, ya se carga después al compilar todo
 import '../scss/styles.scss';
-import { createCheckbox } from './to-do.js';
+import {
+  createObjectTask,
+  deleteTask,
+  filterTasks,
+  checkTask
+} from './object-create';
 
 const form = document.getElementById('form');
-const todoInput = document.getElementById('to-do-input');
 const taskContainer = document.getElementById('taskscontainer');
+const containerFilter = document.getElementById('filter__container');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  createCheckbox(e.target.todo.value);
+  createObjectTask(e.target.todo.value);
 });
 
 taskContainer.addEventListener('click', e => {
   if (e.target.classList.contains('cross')) {
-    e.target.parentElement.remove();
+    deleteTask(e.target.previousSibling.htmlFor);
   }
+  if (e.target.tagName === 'INPUT') {
+    checkTask(e.target.id);
+  }
+});
+
+containerFilter.addEventListener('click', e => {
+  if (!e.target.classList.contains('filter__select')) return;
+  filterTasks(e.target.textContent);
 });

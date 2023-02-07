@@ -1,5 +1,5 @@
 .to-do-input{
-    width: 350px;
+    width: 450px;
     height: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -14,13 +14,13 @@
  }
 
  .tasks-container{
-    width: 400px;
+    width: 450px;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
  }
  .tasks{
-    width: 350px;
+    width: 450px;
     height: 50px;
     background-color: white;
     border: solid 1px grey;
@@ -37,4 +37,26 @@
 .cross{
     margin-left: auto;
     margin-right: 10px;
+}
+
+.container-filter{
+   display: flex;
+   gap: 8px;
+}
+
+.task-filter{
+   display: flex;
+   justify-content: space-between;
+   padding: 30px;
+   font-size: 0.8rem;
+}
+.filter__select{
+   cursor: pointer;
+}
+.filter__select:hover{
+   color: var(--bright-blue);
+}
+
+.filter__clear{
+   cursor: pointer;
 }
