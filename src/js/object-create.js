@@ -1,5 +1,6 @@
 import { createCheckbox } from './to-do.js';
 let arrayTasks = [];
+// const tasksLeft = document.getElementById('tasksLeft')
 
 const createObjectTask = taskToDo => {
   let tasksObj = {
@@ -47,4 +48,13 @@ const filterTasks = e => {
   }
 };
 
-export { createObjectTask, deleteTask, filterTasks, checkTask };
+const clearCompleted = () =>{
+  arrayTasks = arrayTasks.filter(task => task.checked===false);
+  createCheckbox(arrayTasks);
+}
+
+/* arrayTasks.length.addEventListener('change', () =>{
+  tasksLeft.textContent= arrayTasks.lenght + 1 + 'items left';
+}) */
+
+export { createObjectTask, deleteTask, filterTasks, checkTask, clearCompleted };
